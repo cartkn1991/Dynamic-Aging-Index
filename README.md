@@ -83,10 +83,10 @@ Future State Prediction
 
 ### 1. Prepare Your Data
 
-Ensure your biological data follows this structure:
-- **Cross-sectional data**: General biological features (332,909 features)
-- **Present state data**: Current biological measurements
-- **Future state data**: Target aging states for temporal modeling
+Ensure your DNA methylation data follows this structure:
+- **Cross-sectional data**: (332,909 features)
+- **Present state data**: Longitudinal DNA methylation data from 1st time point
+- **Future state data**: Longitudinal DNA methylation data from 2nd time point. Target aging states for temporal modeling
 
 ### 2. Run the Model
 
@@ -138,9 +138,7 @@ This study is based on data from:
 ```python
 # Cross-sectional data structure
 cross_sectional_data = {
-    'features': (n_samples, 332909),  # Biological measurements
-    'age': (n_samples, 1),            # Chronological age
-    'dai_target': (n_samples, 1)      # Target DAI values
+    'features': (n_samples, 332909),  # DNA methylation CpG beta values    
 }
 
 # Temporal data structure
@@ -158,7 +156,7 @@ temporal_data = {
 ```python
 # Key model parameters
 MODEL_CONFIG = {
-    'input_shape': (332909,),      # Biological feature dimension
+    'input_shape': (332909,),      # Feature dimension
     'latent_dim': 25,              # Latent space dimension
     'batch_size': 54,              # Training batch size
     'learning_rate': 0.0001,       # Initial learning rate
