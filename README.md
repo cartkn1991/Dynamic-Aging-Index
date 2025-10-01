@@ -17,7 +17,7 @@ Aging arises from the dynamic instability in the organism's physiological state,
 - **📊 Dynamic Aging Index**: Single scalar metric quantifying biological age
 - **🔬 Multi-modal Architecture**: Combines VAE and Koopman operator theory
 - **🏥 Clinical Applications**: Disease progression monitoring and multimorbidity risk assessment
-- **📈 High-dimensional Processing**: Handles 332,909+ biological features
+- **📈 High-dimensional Processing**: Handles 332,909+ DNA methylation features
 - **🎛️ Interpretable Results**: Extracts meaningful biological insights
 
 ## 🏗️ Architecture Overview
